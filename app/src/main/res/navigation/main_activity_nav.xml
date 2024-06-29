@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.hastanerandevusistemi.homePage.HomePageFragment"
+        android:label="HomePageFragment"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/profilGecis"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/makeAnAppointmentFragmentgecis"
+            app:destination="@id/makeAnAppointmentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_appointmentsFragment"
+            app:destination="@id/appointmentsFragment" />
+        <action
+            android:id="@+id/loginDonus"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.hastanerandevusistemi.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/homePageFragmentgecis"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/registerGecis"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.hastanerandevusistemi.register.RegisterFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/loginGecis"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hastanerandevusistemi.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/makeAnAppointmentFragment"
+        android:name="com.example.hastanerandevusistemi.appointment.MakeAnAppointmentFragment"
+        android:label="MakeAnAppointmentFragment"
+        tools:layout="@layout/fragment_make_an_appointment">
+        <action
+            android:id="@+id/action_makeAnAppointmentFragment_to_appointmentsFragment"
+            app:destination="@id/appointmentsFragment" />
+        <action
+            android:id="@+id/action_makeAnAppointmentFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.example.hastanerandevusistemi.appointment.AppointmentsFragment"
+        android:label="AppointmentsFragment"
+        tools:layout="@layout/fragment_appointments">
+        <action
+            android:id="@+id/action_appointmentsFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+
+</navigation>

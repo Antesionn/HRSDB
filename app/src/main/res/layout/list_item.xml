@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+        <variable
+            name="randevu"
+            type="com.example.hastanerandevusistemi.appointment.RandevuEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/red_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_box_shape"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/red_box1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="#16D31E"
+                android:padding="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@{randevu.cityName}"
+                    android:gravity="center"
+                    android:background="#ffff"
+                    android:textColor=" #433939"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hospital"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@{randevu.hospitalName}"
+                    android:textColor="#433939"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poliklinik"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="90dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@{randevu.departmentName}"
+                    android:textColor="#433939"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/doctor"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@{randevu.doctorName}"
+                    android:textColor="#433939"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/gun"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@{randevu.dayName}"
+                    android:textColor="#433939"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/saat"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:background="#FFFFFF"
+                    android:text="@{randevu.hourName}"
+                    android:textColor="#433939"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
