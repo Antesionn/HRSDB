@@ -1,0 +1,1 @@
+This mobile app is a hospital appointment system. You can make an appointment, track and cancel appointments. This project's database designed and coded in accordance with the design and normalization pattern.
